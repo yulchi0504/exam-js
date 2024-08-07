@@ -1,0 +1,381 @@
+@use "../utils/mixin" as mxn;
+@use "../utils/variables" as var;
+
+.header-bg {
+  background-image: url("../../img/section-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  .hed-img {
+    @include mxn.flex(center, center, 40px);
+    @media (max-width: 800px) {
+      display: block;
+      img {
+        display: flex;
+        margin: 0 auto;
+      }
+    }
+    h1 {
+      @include mxn.family("Rubik", 48px, 700, 72px, black);
+      @media (max-width: 1180px) {
+        font-size: 30px;
+        line-height: 40px;
+        @media (max-width: 900px) {
+          font-size: 20px;
+          line-height: 30px;
+          @media (max-width: 800px) {
+            text-align: center;
+            padding: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+section {
+  background-color: var.$color-bg;
+  .discount-flex {
+    @include mxn.flex(center, space-between, 0);
+    padding: 80px 0 40px 0;
+    h2 {
+      @include mxn.family("Rubik", 36px, 700, 35px, var.$color-black);
+      @media (max-width: 500px) {
+        font-size: 28px;
+      }
+    }
+    .disc-link {
+      @include mxn.flex(center, space-between, 8px);
+      a {
+        @include mxn.family("Rubik", 16px, 400, 24px, rgba(96, 96, 96, 1));
+        text-decoration: none;
+      }
+    }
+  }
+  .box-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    @media (max-width: 1240px) {
+      display: ruby;
+    }
+    .box {
+      width: 272px;
+      height: 350px;
+      background-color: rgba(255, 255, 255, 1);
+      border-radius: 4px;
+      position: relative;
+      cursor: pointer;
+      transition: 1s;
+      @media (max-width: 1240px) {
+        margin: 20px 0;
+      }
+      .like-hover {
+        background-color: rgba(243, 242, 241, 0.5);
+        display: flex;
+        padding: 2px;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        display: none;
+        border-radius: 2px;
+      }
+      .percentage {
+        @include mxn.family("Rubik", 16px, 400, 24px, var.$color-white);
+        background-color: var.$color-orange;
+        width: 56px;
+        height: 32px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        position: absolute;
+        top: 118px;
+        left: 8px;
+      }
+      .price-discount {
+        @include mxn.flex(center, center, 126px);
+
+        .price-left {
+          h3 {
+            @include mxn.family("Rubik", 18px, 700, 27px, var.$color-black);
+          }
+          p {
+            @include mxn.family(
+              "Rubik",
+              12px,
+              400,
+              18px,
+              rgba(191, 191, 191, 1)
+            );
+            padding-left: 8px;
+          }
+        }
+        .price-right {
+          h3 {
+            @include mxn.family("Rubik", 16px, 400, 24px, rgba(96, 96, 96, 1));
+          }
+          p {
+            @include mxn.family(
+              "Rubik",
+              12px,
+              400,
+              18px,
+              rgba(191, 191, 191, 1)
+            );
+          }
+        }
+      }
+      h3 {
+        @include mxn.family("Rubik", 16px, 400, 24px, var.$color-black);
+        padding-left: 8px;
+        padding-top: 8px;
+      }
+      .rating {
+        display: flex;
+        padding: 8px 0 0 8px;
+      }
+      .link-pric {
+        @include mxn.flex(center, center, 0);
+        width: 256px;
+        height: 40px;
+        border: var.$color-green solid 1px;
+        margin-left: 8px;
+        margin-top: 8px;
+        border-radius: 4px;
+        .perc-link {
+          @include mxn.family("Rubik", 16px, 400, 27px, var.$color-green);
+          text-decoration: none;
+        }
+      }
+      .link-pric:hover {
+        background-color: var.$color-orange;
+        border: none;
+        transition: 1s;
+      }
+      .link-pric:hover .perc-link {
+        color: white;
+      }
+    }
+    .box:hover .like-hover {
+      display: block;
+      transition: 1s;
+    }
+    .box:hover {
+      transform: scale(1.05);
+    }
+  }
+  .new-price {
+    @include mxn.family("Rubik", 18px, 700, 27px, var.$color-black);
+  }
+}
+
+aside {
+  background-color: var.$color-bg;
+  h1 {
+    @include mxn.family("Rubik", 36px, 700, 54px, var.$color-black);
+    padding: 120px 0 40px 0;
+  }
+  .aside-box-flex {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1190px) {
+      display: flex;
+      flex-direction: column;
+    }
+    .box-one {
+      max-width: 584px;
+      height: 200px;
+      background-color: var.$color-red;
+      border-radius: 4px;
+      transition: 1s;
+      @media (max-width: 540px) {
+        height: 320px;
+      }
+      .box-in-flex {
+        @include mxn.flex(center, center, 0);
+        @media (max-width: 540px) {
+          display: block;
+        }
+        .box-in-left {
+          padding-left: 15px;
+          h2 {
+            @include mxn.family("Rubik", 24px, 700, 36 px, var.$color-black);
+          }
+          p {
+            @include mxn.family("Rubik", 16px, 400, 24px, var.$color-black);
+            padding-top: 6px;
+          }
+        }
+        img {
+          @media (max-width: 390px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .box-one:hover {
+      box-shadow: 10px 25px 40px 1px rgba(202, 147, 96, 0.5);
+      cursor: pointer;
+      transition: 1s;
+    }
+    .box-two {
+      max-width: 584px;
+      height: 200px;
+      background-color: rgba(229, 255, 222, 1);
+      border-radius: 4px;
+      transition: 1s;
+      @media (max-width: 1190px) {
+        margin-top: 20px;
+        @media (max-width: 540px) {
+          height: 320px;
+        }
+      }
+      .box-in-flex {
+        @include mxn.flex(center, center, 0);
+        @media (max-width: 540px) {
+          display: block;
+        }
+        .box-in-left {
+          padding-left: 15px;
+          h2 {
+            max-width: 258px;
+            @include mxn.family("Rubik", 24px, 700, 36 px, var.$color-black);
+            @media (max-width: 540px) {
+              text-align: center;
+            }
+          }
+          p {
+            max-width: 258px;
+            @include mxn.family("Rubik", 16px, 400, 24px, var.$color-black);
+            padding-top: 6px;
+            @media (max-width: 540px) {
+              text-align: center;
+            }
+          }
+        }
+        img {
+          padding: 8px 41px 0 51px;
+          img {
+            @media (max-width: 610px) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .box-two:hover {
+      box-shadow: 10px 25px 40px 1px rgba(202, 147, 96, 0.5);
+      cursor: pointer;
+      transition: 1s;
+    }
+  }
+  .tabs {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 24px;
+    @media (max-width: 400px) {
+      gap: 10px;
+      @media (max-width: 390px) {
+        display: block;
+      }
+    }
+    a {
+      text-decoration: none;
+      @include mxn.family("Rubik", 12px, 400, 18px, rgba(96, 96, 96, 1));
+      background-color: rgba(243, 242, 241, 1);
+      display: flex;
+      padding: 8px;
+      border-radius: 4px;
+      width: 97px;
+      margin-top: 10px;
+    }
+    a:hover {
+      background-color: var.$color-green;
+      color: white;
+      transition: 1s;
+    }
+  }
+  .discount-flex {
+    @include mxn.flex(center, space-between, 0);
+    padding: 80px 0 40px 0;
+    h2 {
+      @include mxn.family("Rubik", 36px, 700, 35px, var.$color-black);
+      @media (max-width: 500px) {
+        font-size: 28px;
+      }
+    }
+    .disc-link {
+      @include mxn.flex(center, space-between, 8px);
+      a {
+        @include mxn.family("Rubik", 16px, 400, 24px, rgba(96, 96, 96, 1));
+        text-decoration: none;
+      }
+    }
+  }
+  .nature-next-fruit {
+    @include mxn.flex(center, space-between, 0);
+    @media (max-width: 1180px) {
+      display: ruby;
+    }
+
+    .box-bg {
+      background-color: var.$color-white;
+      max-width: 376px;
+      height: 450px;
+      border-radius: 4px;
+      transition: 2s;
+      margin: 10px 0 80px 0;
+      @media (max-width: 500px) {
+        max-width: 300px;
+        height: 430px;
+      }
+      img {
+        border-radius: 4px 4px 0 0;
+        width: 100%;
+      }
+      p {
+        @include mxn.family("Rubik", 12px, 400, 12px, rgba(143, 143, 143, 1));
+        padding: 10px 10px;
+      }
+      h2 {
+        @include mxn.family("Rubik", 18px, 700, 27px, var.$color-black);
+        max-width: 356px;
+        margin-left: 10px;
+      }
+      h3 {
+        @include mxn.family("Rubik", 16px, 400, 24px, var.$color-black);
+        max-width: 356px;
+        margin-left: 10px;
+        padding: 10px 0;
+        @media (max-width: 500px) {
+          font-size: 14px;
+        }
+      }
+      button {
+        @include mxn.family("Rubik", 16px, 400, 24px, var.$color-green);
+        background-color: rgba(229, 255, 222, 1);
+        border: none;
+        display: flex;
+        padding: 8px 16px;
+        margin-left: 10px;
+        border-radius: 4px;
+      }
+      button:hover {
+        background-color: var.$color-green;
+        color: var.$color-white;
+        cursor: pointer;
+        transition: 1s;
+      }
+    }
+    .box-bg:hover {
+      box-shadow: 5px 15px 20px 2px var.$color-black;
+      transform: rotate(6deg);
+      transition: 2s;
+      cursor: pointer;
+      @media (max-width: 500px) {
+        transform: rotate(2deg);
+      }
+    }
+  }
+}
+
+

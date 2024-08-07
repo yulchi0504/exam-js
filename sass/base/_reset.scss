@@ -1,0 +1,19 @@
+@use "../utils/function" as func;
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+.container {
+  $mb-padding: 20;
+  max-width: func.container(1440, 116, $mb-padding);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $mb-padding + px;
+  padding-right: $mb-padding + px;
+}

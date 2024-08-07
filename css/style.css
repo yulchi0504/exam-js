@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.container {
+  max-width: 1248px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 16px 0;
+}
+@media (max-width: 1190px) {
+  header nav {
+    gap: 5px;
+  }
+}
+@media (max-width: 1190px) and (max-width: 760px) {
+  header nav {
+    display: block;
+  }
+}
+header nav .nav-bl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+header nav .nav-bl .nav-brand a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+header nav .nav-bl .nav-brand a h1 {
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  color: black;
+  text-transform: uppercase;
+}
+@media (max-width: 480px) {
+  header nav .nav-bl .nav-brand a h1 {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  header nav .nav-bl {
+    gap: 20px;
+  }
+}
+header nav .nav-bl .catalog-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+header nav .nav-bl .catalog-search .catalog {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background-color: rgb(112, 192, 91);
+  border-radius: 4px;
+  padding: 8px;
+}
+@media (max-width: 520px) {
+  header nav .nav-bl .catalog-search .catalog {
+    display: none;
+  }
+}
+header nav .nav-bl .catalog-search .catalog h3 {
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: white;
+  right: 30px;
+}
+@media (max-width: 1190px) {
+  header nav .nav-bl .catalog-search .catalog h3 {
+    display: none;
+  }
+}
+header nav .nav-bl .catalog-search .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  width: 374px;
+  height: 40px;
+  border-radius: 4px;
+  border: rgb(112, 192, 91) solid 2px;
+}
+@media (max-width: 1190px) {
+  header nav .nav-bl .catalog-search .search {
+    width: 230px;
+  }
+}
+header nav .nav-bl .catalog-search .search input {
+  border: none;
+  display: flex;
+  border-radius: 4px;
+  padding: 10px 170px 10px 8px;
+}
+@media (max-width: 1190px) {
+  header nav .nav-bl .catalog-search .search input {
+    padding: 10px 30px 10px 8px;
+  }
+}
+header nav .nav-end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+@media (max-width: 800px) {
+  header nav .nav-end {
+    gap: 20px;
+  }
+}
+@media (max-width: 800px) and (max-width: 800px) {
+  header nav .nav-end {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 800px) and (max-width: 800px) and (max-width: 360px) {
+  header nav .nav-end {
+    display: none;
+  }
+}
+header nav .nav-end .categoriy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+header nav .nav-end .categoriy .img-act img {
+  display: flex;
+  margin: 0 auto;
+}
+header nav .nav-end .categoriy .img-act a {
+  font-family: "Rubik";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgb(65, 65, 65);
+  text-decoration: none;
+  padding-top: 8px;
+}
+header nav .nav-end .menej {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+header nav .nav-end .menej h1 {
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(35, 35, 35);
+}
+@media (max-width: 930px) {
+  header nav .nav-end .menej h1 {
+    display: none;
+  }
+}
+@media (max-width: 930px) {
+  header nav .nav-end .menej .arrow {
+    display: none;
+  }
+}
+
+footer {
+  background-image: url("../../img/bg.svg");
+  background-color: rgb(250, 245, 227);
+}
+footer .footer-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+@media (max-width: 1110px) {
+  footer .footer-flex {
+    display: block;
+  }
+}
+footer .footer-flex .logo-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 24px 0 58px 0;
+}
+@media (max-width: 790px) {
+  footer .footer-flex .logo-brand {
+    display: block;
+  }
+}
+footer .footer-flex .logo-brand .footer-menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+@media (max-width: 790px) {
+  footer .footer-flex .logo-brand .footer-menu ul {
+    gap: 20px;
+  }
+}
+@media (max-width: 580px) {
+  footer .footer-flex .logo-brand .footer-menu ul {
+    display: ruby;
+  }
+}
+footer .footer-flex .logo-brand .footer-menu ul li {
+  font-family: "Rubik";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: black;
+  list-style-type: none;
+}
+footer .footer-flex .massge-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+footer .footer-flex .massge-flex .massage {
+  display: flex;
+  gap: 16px;
+}
+footer .footer-flex .massge-flex .number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+footer .footer-design {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 16px;
+  padding-bottom: 20px;
+}
+footer .footer-design p {
+  font-family: "Rubik";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: black;
+}

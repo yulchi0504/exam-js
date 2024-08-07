@@ -1,0 +1,56 @@
+@use "../utils/mixin" as mxn;
+@use "../utils/variables" as var;
+
+footer {
+  background-image: url("../../img/bg.svg");
+  background-color: rgb(250, 245, 227);
+  .footer-flex {
+    @include mxn.flex(center, space-between, 0);
+    @media (max-width: 1110px) {
+      display: block;
+    }
+
+    .logo-brand {
+      @include mxn.flex(center, center, 40px);
+      padding: 24px 0 58px 0;
+      @media (max-width: 790px) {
+        display: block;
+      }
+
+      .footer-menu {
+        ul {
+          @include mxn.flex(center, center, 40px);
+          @media (max-width: 790px) {
+            gap: 20px;
+          }
+          @media (max-width: 580px) {
+            display: ruby;
+          }
+          li {
+            @include mxn.family("Rubik", 12px, 400, 18px, black);
+
+            list-style-type: none;
+          }
+        }
+      }
+    }
+    .massge-flex {
+      @include mxn.flex(center, center, 24px);
+
+      .massage {
+        display: flex;
+        gap: 16px;
+      }
+      .number {
+        @include mxn.flex(center, space-between, 8px);
+      }
+    }
+  }
+  .footer-design {
+    @include mxn.flex(center, end, 16px);
+    padding-bottom: 20px;
+    p {
+      @include mxn.family("Rubik", 12px, 400, 16px, black);
+    }
+  }
+}

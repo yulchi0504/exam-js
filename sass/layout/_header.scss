@@ -1,0 +1,114 @@
+@use "../utils/mixin" as mxn;
+@use "../utils/variables" as var;
+
+header {
+  nav {
+    @include mxn.flex(center, center, 40px);
+    padding: 16px 0;
+    @media (max-width: 1190px) {
+      gap: 5px;
+      @media (max-width: 760px) {
+        display: block;
+      }
+    }
+    .nav-bl {
+      @include mxn.flex(center, center, 40px);
+      .nav-brand {
+        a {
+          @include mxn.flex(center, center, 10px);
+          text-decoration: none;
+          h1 {
+            @include mxn.family("Rubik", 16px, 700, 28px, black);
+            text-transform: uppercase;
+            @media (max-width: 480px) {
+              display: none;
+            }
+          }
+        }
+      }
+      @media (max-width: 800px) {
+        gap: 20px;
+      }
+      .catalog-search {
+        @include mxn.flex(center, space-between, 15px);
+
+        .catalog {
+          @include mxn.flex(center, space-between, 15px);
+          background-color: var.$color-green;
+          border-radius: 4px;
+          padding: 8px;
+          @media (max-width: 520px) {
+            display: none;
+          }
+          h3 {
+            @include mxn.family("Rubik", 16px, 400, 24px, white);
+            right: 30px;
+            @media (max-width: 1190px) {
+              display: none;
+            }
+          }
+        }
+        .search {
+          @include mxn.flex(center, space-between, 0);
+          width: 374px;
+          height: 40px;
+          border-radius: 4px;
+          border: var.$color-green solid 2px;
+          @media (max-width: 1190px) {
+            width: 230px;
+          }
+
+          input {
+            border: none;
+            display: flex;
+            border-radius: 4px;
+            padding: 10px 170px 10px 8px;
+            @media (max-width: 1190px) {
+              padding: 10px 30px 10px 8px;
+            }
+          }
+        }
+      }
+    }
+    .nav-end {
+      @include mxn.flex(center, center, 40px);
+      @media (max-width: 800px) {
+        gap: 20px;
+        @media (max-width: 800px) {
+          padding-top: 20px;
+          @media (max-width: 360px) {
+            display: none;
+          }
+        }
+      }
+      .categoriy {
+        @include mxn.flex(center, space-between, 12px);
+        .img-act {
+          img {
+            display: flex;
+            margin: 0 auto;
+          }
+          a {
+            @include mxn.family("Rubik", 12px, 400, 18px, rgba(65, 65, 65, 1));
+            text-decoration: none;
+            padding-top: 8px;
+          }
+        }
+      }
+      .menej {
+        @include mxn.flex(center, space-between, 24px);
+        h1 {
+          @include mxn.family("Rubik", 16px, 400, 24px, rgba(35, 35, 35, 1));
+          @media (max-width: 930px) {
+            display: none;
+          }
+        }
+        .arrow {
+          @media (max-width: 930px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
