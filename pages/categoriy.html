@@ -6,13 +6,15 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="../css/style.min.css" />
+    <link rel="stylesheet" href="../css/category.min.css" />
   </head>
   <body>
+    <span class="loader"></span>
     <header>
       <div class="container">
         <nav>
           <div class="nav-bl">
-            <div class="nav-brand">
+            <div class="nav-brand" style="align-items: center">
               <a href="../index.html">
                 <img src="../img/logo.svg" alt="No img?" />
                 <h1 class="logo-h1">Северяночка</h1>
@@ -21,10 +23,14 @@
             <div class="catalog-search">
               <div class="catalog">
                 <img src="../img/menu.svg" alt="No img?" />
-                <h3>Каталог</h3>
+                <h3 class="catalo-menu">Каталог</h3>
               </div>
               <div class="search">
-                <input type="text" placeholder="Найти товар " />
+                <input
+                  class="search-pro"
+                  type="text"
+                  placeholder="Найти товар "
+                />
                 <img src="../img/search.svg" alt="No img?" />
               </div>
             </div>
@@ -59,6 +65,88 @@
         </nav>
       </div>
     </header>
+
+    <div class="header-menu">
+      <div class="header-link-about">
+        <ul>
+          <li>
+            <a class="head-link" href="">Молоко, сыр, яйцо</a>
+          </li>
+          <li>
+            <a class="head-link" href="">Хлеб</a>
+          </li>
+          <li>
+            <a class="head-link" href="">Фрукты и овощи</a>
+          </li>
+          <li>
+            <a class="head-link" href="">Замороженные продукты</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a class="head-link" href="">Напитки</a>
+          </li>
+          <li>
+            <a class="head-link" href="">Кондитерские изделия</a>
+          </li>
+          <li>
+            <a class="head-link" href="">Чай, кофе</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a class="head-link" href="">Бакалея</a>
+          </li>
+          <li>
+            <a class="head-link" href="">Здоровое питание</a>
+          </li>
+          <li>
+            <a class="head-link" href="">Зоотовары</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a class="head-link" href="">Непродовольственные товары</a>
+          </li>
+          <li>
+            <a class="head-link" href="">Детское питание</a>
+          </li>
+          <li>
+            <a class="head-link" href="">Мясо, птица, колбаса</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <section>
+      <div class="container">
+        <div class="card-new">
+          <a href="../index.html">Главная</a>
+          <p>></p>
+          <a href="../index.html">Каталог</a>
+          <p>></p>
+          <a href="#">Молоко, сыр, яйцо</a>
+        </div>
+        <h1>Молоко, сыр, яйцо</h1>
+      </div>
+    </section>
+    <div class="container">
+      <ul class="tab-menu">
+        <li class="tab-about">
+          <a class="tab-link" href="#">Товары нашего производства</a>
+        </li>
+        <li class="tab-about">
+          <a class="tab-link" href="#">Полезное питание</a>
+        </li>
+        <li class="tab-about">
+          <a class="tab-link" href="#">Без ГМО</a>
+        </li>
+      </ul>
+    </div>
+    <main>
+      <div class="container">
+        <div class="all-products cards"></div>
+      </div>
+    </main>
     <footer>
       <div class="container">
         <div class="footer-flex">
@@ -102,5 +190,9 @@
         </div>
       </div>
     </footer>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/category.js"></script>
+    <script src="../js/togille.js"></script>
   </body>
 </html>

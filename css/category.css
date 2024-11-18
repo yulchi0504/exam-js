@@ -1,0 +1,136 @@
+body {
+  background-color: rgb(250, 247, 235);
+}
+
+section {
+  margin: 0 0 20px 0;
+}
+section .container .card-new {
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+}
+section .container .card-new a {
+  text-decoration: none;
+  font-family: "Rubik";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: black;
+}
+section .container h1 {
+  font-family: "Rubik";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+  color: black;
+  padding: 0 0 60px 0;
+}
+
+.tab-menu {
+  display: flex;
+  gap: 24px;
+  margin: 0 0 40px;
+}
+.tab-menu .tab-about {
+  list-style: none;
+}
+.tab-menu .tab-about .tab-link {
+  text-decoration: none;
+  background-color: rgb(243, 242, 241);
+  font-family: "Rubik";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: black;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+main .container .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 9fr);
+}
+main .container .cards .card {
+  width: 279px;
+  height: 349px;
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+main .container .cards .card img {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+main .container .cards .card .card--footer__btn {
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(112, 192, 91);
+  background-color: white;
+  border: 1px solid rgb(112, 192, 91);
+  width: 256px;
+  height: 40px;
+  border-radius: 4px;
+  display: flexma;
+  transition: 1s;
+  margin: 10px 0 0 10px;
+}
+main .container .cards .card h2 {
+  display: -webkit-box;
+  padding: 2px 10px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+main .container .cards .card .card--footer__btn:hover {
+  background: rgb(255, 102, 51);
+  color: white;
+  cursor: pointer;
+}
+
+.card--footer__desc {
+  display: -webkit-box;
+  padding: 0 10px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.card--footer__price {
+  padding: 4px 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.header-menu {
+  background: white;
+}
+.header-menu .header-link-about {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  list-style: none;
+}
+
+.head-link {
+  display: flex;
+  text-decoration: none;
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: black;
+  padding: 12px 0;
+}
+
+.header-menu {
+  display: none;
+}
+
+.hidden {
+  display: block;
+}

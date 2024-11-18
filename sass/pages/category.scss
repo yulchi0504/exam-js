@@ -1,0 +1,119 @@
+@use "../utils/mixin" as mxn;
+@use "../utils/variables" as var;
+
+body {
+  background-color: rgb(250, 247, 235);
+}
+
+section {
+  margin: 0 0 20px 0;
+  .container {
+    .card-new {
+      display: flex;
+      gap: 16px;
+      padding: 20px 0;
+      a {
+        text-decoration: none;
+        @include mxn.family("Rubik", 12px, 400, 18px, black);
+      }
+    }
+    h1 {
+      @include mxn.family("Rubik", 48px, 700, 72px, black);
+      padding: 0 0 60px 0;
+    }
+  }
+}
+
+.tab-menu {
+  display: flex;
+  gap: 24px;
+  margin: 0 0 40px;
+  .tab-about {
+    list-style: none;
+    .tab-link {
+      text-decoration: none;
+      background-color: rgba(243, 242, 241, 1);
+      @include mxn.family("Rubik", 12px, 400, 18px, black);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  }
+}
+main {
+  .container {
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 9fr);
+
+      .card {
+        width: 279px;
+        height: 349px;
+        background-color: white;
+        border-radius: 4px;
+        margin-top: 20px;
+        img {
+          width: 100%;
+          border-radius: 4px 4px 0 0;
+        }
+        .card--footer__btn {
+          @include mxn.family("Rubik", 16px, 400, 24px, rgba(112, 192, 91, 1));
+          background-color: white;
+          border: 1px solid rgba(112, 192, 91, 1);
+          width: 256px;
+          height: 40px;
+          border-radius: 4px;
+          display: flexma;
+          transition: 1s;
+          margin: 10px 0 0 10px;
+        }
+        h2 {
+          display: -webkit-box;
+          padding: 2px 10px;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          overflow: hidden;
+        }
+        .card--footer__btn:hover {
+          background: rgba(255, 102, 51, 1);
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.card--footer__desc {
+  display: -webkit-box;
+  padding: 0 10px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.card--footer__price {
+  padding: 4px 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.header-menu {
+  background: white;
+  .header-link-about {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+li {
+  list-style: none;
+}
+.head-link {
+  display: flex;
+  text-decoration: none;
+  @include mxn.family("Rubik", 16px, 700, 24px, black);
+  padding: 12px 0;
+}
+.header-menu {
+  display: none;
+}
+.hidden{
+  display: block;
+}
