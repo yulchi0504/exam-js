@@ -1,6 +1,9 @@
 @use "../utils/mixin" as mxn;
 @use "../utils/variables" as var;
 
+body {
+  display: none;
+}
 .header-bg {
   background-image: url("../../img/section-bg.svg");
   background-repeat: no-repeat;
@@ -378,7 +381,6 @@ aside {
   }
 }
 
-
 .backtop {
   position: relative;
   position: fixed;
@@ -387,5 +389,27 @@ aside {
   padding: 20px 20px;
   background-color: green;
   border-radius: 12px;
-  
+}
+
+  .header-menu {
+    display: none;
+  }
+  .hidden {
+    display: block;
+  }
+.header-menu {
+  background: white;
+  .header-link-about {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+li {
+  list-style: none;
+}
+.head-link {
+  display: flex;
+  text-decoration: none;
+  @include mxn.family("Rubik", 16px, 700, 24px, black);
+  padding: 12px 0;
 }

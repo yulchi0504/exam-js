@@ -1,3 +1,7 @@
+body {
+  display: none;
+}
+
 .header-bg {
   background-image: url("../../img/section-bg.svg");
   background-repeat: no-repeat;
@@ -531,4 +535,35 @@ aside .nature-next-fruit .box-bg:hover {
   padding: 20px 20px;
   background-color: green;
   border-radius: 12px;
+}
+
+.header-menu {
+  display: none;
+}
+
+.hidden {
+  display: block;
+}
+
+.header-menu {
+  background: white;
+}
+.header-menu .header-link-about {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  list-style: none;
+}
+
+.head-link {
+  display: flex;
+  text-decoration: none;
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: black;
+  padding: 12px 0;
 }

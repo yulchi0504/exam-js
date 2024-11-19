@@ -1,6 +1,13 @@
+let loading = document.querySelector(".lds-spinner");
+let newLoad = document.querySelector("body");
 window.onload = function () {
-  let loading = document.querySelector(".lds-spinner");
+  newLoad.classList.add("body");
+
   setTimeout(() => {
-    loading.style.display = "none"; 
-  }, 2000); 
+    if (newLoad.classList.contains("body")) {
+      newLoad.style.display = "block";
+    }
+
+    loading.style.display = "none";
+  }, 2000);
 };
