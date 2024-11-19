@@ -134,3 +134,13 @@ li {
 .hidden {
   display: block;
 }
+
+.backtop {
+  position: relative;
+  position: fixed;
+  left: 1400px;
+  top: 600px;
+  padding: 20px 20px;
+  background-color: green;
+  border-radius: 12px;
+}
