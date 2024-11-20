@@ -17,14 +17,18 @@ function getAllProductsCard({ id, name, description: desc, price, images }) {
   </div>
   `;
 }
-products.forEach((product) => {
-  allProducts.innerHTML += getAllProductsCard(product);
-});
-
+function getProducts(data = products) {
+  allProducts.innerHTML="";
+  data.forEach((product) => {
+    allProducts.innerHTML += getAllProductsCard(product);
+  });
+}
+getProducts();
 searchProduct.addEventListener("keyup", function () {
-  let search = this.value;
-  let searchProduct = product.filter((product) =>
-    product.name.includes(search)
+  let search = this.value.trim().toLowerCase();
+
+  let searchProduct = products.filter((product) =>
+    product.name.toLowerCase().includes(search)
   );
-  console.log(searchProduct);
+  getProducts(searchProduct);
 });
