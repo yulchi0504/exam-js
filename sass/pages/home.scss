@@ -4,6 +4,12 @@
 body {
   display: none;
 }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+}
 .header-bg {
   background-image: url("../../img/section-bg.svg");
   background-repeat: no-repeat;

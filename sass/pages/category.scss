@@ -4,8 +4,15 @@
 body {
   background-color: rgb(250, 247, 235);
 }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+}
 
 section {
+  z-index: -10;
   margin: 0 0 20px 0;
   .container {
     .card-new {
