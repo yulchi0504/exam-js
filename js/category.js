@@ -16,36 +16,20 @@ function getAllProductsCard({ id, name, description: desc, price, images }) {
   </div>
   `;
 }
-<<<<<<< HEAD
 
 function getProducts(data = products) {
   allProducts.innerHTML = "";
-=======
-function getProducts(data = products) {
-  allProducts.innerHTML="";
->>>>>>> 2a3747807b94d478c9ed726d010b6e60222e9cb7
   data.forEach((product) => {
     allProducts.innerHTML += getAllProductsCard(product);
   });
 }
-<<<<<<< HEAD
 
 getProducts();
 
 searchInput.addEventListener("keyup", function () {
-  let search = this.value.toLowerCase(); 
+  let search = this.value.toLowerCase(); // Katta-kichik harflarni hisobga olmaslik uchun
   let filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(search)
   );
-  getProducts(filteredProducts); 
-=======
-getProducts();
-searchProduct.addEventListener("keyup", function () {
-  let search = this.value.trim().toLowerCase();
-
-  let searchProduct = products.filter((product) =>
-    product.name.toLowerCase().includes(search)
-  );
-  getProducts(searchProduct);
->>>>>>> 2a3747807b94d478c9ed726d010b6e60222e9cb7
+  getProducts(filteredProducts);
 });

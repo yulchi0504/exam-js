@@ -8,21 +8,6 @@
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
   <body>
-    <div class="lds-spinner">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-
     <header>
       <div class="container">
         <nav>
@@ -36,16 +21,13 @@
             <div class="catalog-search">
               <div class="catalog" style="cursor: pointer">
                 <img src="./img/menu.svg" alt="No img?" />
-                <h3 class="catalog-menu">Каталог</h3>
+                <h3 class="catalog-menu">Catalog</h3>
               </div>
               <div class="search">
                 <input
                   type="text"
                   placeholder="Найти товар "
-<<<<<<< HEAD
-=======
                   class="search-pro"
->>>>>>> 2a3747807b94d478c9ed726d010b6e60222e9cb7
                   style="outline: none"
                 />
                 <img src="./img/search.svg" alt="No img?" />
@@ -144,23 +126,32 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="action">
-        <h1>Акции</h1>
-        <a href="./pages/categoriy.html">Все акции ></a>
-      </div>
-    </div>
-    <main>
+    <section class="section-grid">
       <div class="container">
-        <div class="all-products cards"></div>
+        <div class="action-link">
+          <h3>Акции</h3>
+          <a href="./pages/categoriy.html">Все акции > </a>
+        </div>
+
+        <div class="discount-row card-producs"></div>
       </div>
-    </main>
-    <div class="container">
-      <div class="action">
-        <h1>Новинки</h1>
-        <a href="./pages/categoriy.html">Все акции ></a>
+
+      <div class="container">
+        <div class="action-link">
+          <h3>Новинки</h3>
+          <a href="./pages/zakas.html">Все новинки ></a>
+        </div>
+        <div class="newProducts-row card-producs"></div>
       </div>
-    </div>
+
+      <div class="container">
+        <div class="action-link">
+          <h3>Покупали раньше</h3>
+          <a href="./pages/categoriy.html">Все покупки > </a>
+        </div>
+        <div class="popular-row card-producs"></div>
+      </div>
+    </section>
     <!-- <section>
       <div class="container">
         <div class="discount-flex">
@@ -518,6 +509,7 @@
     <script src="./js/home.js"></script>
     <script src="./js/products.js"></script>
     <script src="./js/category.js"></script>
+    <script src="./js/section.js"></script>
     <script src="./js/togille.js"></script>
     <script src="./js/loading.js"></script>
     <script src="./js/bactop.js"></script>
