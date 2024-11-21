@@ -1,12 +1,11 @@
 let allProducts = document.querySelector(".all-products");
-let searchProduct = document.querySelector(".search-pro");
+let searchInput = document.querySelector(".search-pro");
 
 function getAllProductsCard({ id, name, description: desc, price, images }) {
   return `
   <div class="card">
-  
     <div class="card--body">
-      <img src=${images[0]} alt=${name} />
+      <img src="${images[0]}" alt="${name}" />
     </div>
     <div class="card--footer">
       <h2>${name}</h2>
@@ -17,14 +16,20 @@ function getAllProductsCard({ id, name, description: desc, price, images }) {
   </div>
   `;
 }
-products.forEach((product) => {
-  allProducts.innerHTML += getAllProductsCard(product);
-});
 
-searchProduct.addEventListener("keyup", function () {
-  let search = this.value;
-  let searchProduct = product.filter((product) =>
-    product.name.includes(search)
+function getProducts(data = products) {
+  allProducts.innerHTML = "";
+  data.forEach((product) => {
+    allProducts.innerHTML += getAllProductsCard(product);
+  });
+}
+
+getProducts();
+
+searchInput.addEventListener("keyup", function () {
+  let search = this.value.toLowerCase(); 
+  let filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(search)
   );
-  console.log(searchProduct);
+  getProducts(filteredProducts); 
 });

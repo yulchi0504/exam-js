@@ -2,6 +2,12 @@ body {
   background-color: rgb(250, 247, 235);
 }
 
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
 section {
   margin: 0 0 20px 0;
 }
