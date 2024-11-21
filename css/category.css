@@ -5,10 +5,15 @@ body {
 header {
   position: sticky;
   top: 0;
+<<<<<<< HEAD
+=======
+  z-index: 1;
+>>>>>>> 2a3747807b94d478c9ed726d010b6e60222e9cb7
   background-color: white;
 }
 
 section {
+  z-index: -10;
   margin: 0 0 20px 0;
 }
 section .container .card-new {

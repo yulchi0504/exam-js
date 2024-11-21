@@ -5,8 +5,13 @@ body {
 header {
   position: sticky;
   top: 0;
+<<<<<<< HEAD
   background-color: white;
   z-index: 1;
+=======
+  z-index: 1;
+  background-color: white;
+>>>>>>> 2a3747807b94d478c9ed726d010b6e60222e9cb7
 }
 
 .header-bg {
@@ -534,6 +539,22 @@ aside .nature-next-fruit .box-bg:hover {
   }
 }
 
+.action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 0 40px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2d2d2d;
+}
+
+a:hover {
+  color: rgb(255, 102, 51);
+}
+
 .backtop {
   position: relative;
   position: fixed;
@@ -573,4 +594,61 @@ li {
   line-height: 24px;
   color: black;
   padding: 12px 0;
+}
+
+main .container .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 9fr);
+}
+main .container .cards .card {
+  width: 279px;
+  height: 349px;
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+main .container .cards .card img {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+main .container .cards .card .card--footer__btn {
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(112, 192, 91);
+  background-color: white;
+  border: 1px solid rgb(112, 192, 91);
+  width: 256px;
+  height: 40px;
+  border-radius: 4px;
+  display: flexma;
+  transition: 1s;
+  margin: 10px 0 0 10px;
+}
+main .container .cards .card h2 {
+  display: -webkit-box;
+  padding: 2px 10px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+main .container .cards .card .card--footer__btn:hover {
+  background: rgb(255, 102, 51);
+  color: white;
+  cursor: pointer;
+}
+
+.card--footer__desc {
+  display: -webkit-box;
+  padding: 0 10px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.card--footer__price {
+  padding: 4px 10px;
+  font-size: 18px;
+  font-weight: 500;
 }
