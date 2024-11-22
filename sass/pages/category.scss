@@ -10,12 +10,6 @@ header {
   z-index: 1;
   background-color: white;
 }
-
-header {
-  position: sticky;
-  top: 0;
-  background-color: white;
-}
 section {
   z-index: -10;
   margin: 0 0 20px 0;
@@ -56,6 +50,10 @@ main {
     .cards {
       display: grid;
       grid-template-columns: repeat(4, 9fr);
+      @media (max-width:1240px){
+        display: grid;
+        grid-template-columns: repeat(12,3fr);
+      }
 
       .card {
         width: 279px;
