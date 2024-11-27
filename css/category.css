@@ -9,12 +9,6 @@ header {
   background-color: white;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  background-color: white;
-}
-
 section {
   z-index: -10;
   margin: 0 0 20px 0;
@@ -64,6 +58,12 @@ section .container h1 {
 main .container .cards {
   display: grid;
   grid-template-columns: repeat(4, 9fr);
+}
+@media (max-width: 1240px) {
+  main .container .cards {
+    display: grid;
+    grid-template-columns: repeat(12, 3fr);
+  }
 }
 main .container .cards .card {
   width: 279px;

@@ -36,23 +36,22 @@ searchInput.addEventListener("keyup", function () {
   getProducts(filteredProducts);
 });
 
-function addCard(id) {
-  let product = products.find((pro) => pro.id === id);
-  let check = cards.find((pro) => pro.id === id);
+// function addCard(id) {
+//   let product = products.find((pro) => pro.id === id);
+//   let check = cards.find((pro) => pro.id === id);
 
-  if (check) {
-     cards = cards.map((pro) => {
-      if (pro.id === id) {
-        pro.quantety++;
-      }
-      return pro;
-    });
-  } else {
-    product.quantety = 1;
-    cards.push(product);
-  }
+//   if (check) {
+//     cards = cards.map((pro) => {
+//       if (pro.id === id) {
+//         pro.quantety++;
+//       }
+//       return pro;
+//     });
+//   } else {
+//     product.quantety = 1;
+//     cards.push(product);
+//   }
 
-  setCard(product);
-  console.log(cards);
-  
-}
+//   setCard(product);
+//   console.log(cards);
+// }
