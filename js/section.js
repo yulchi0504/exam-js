@@ -3,6 +3,7 @@ let newProductsRow = document.querySelector(".newProducts-row");
 let popularProductsRow = document.querySelector(".popular-row");
 
 function getProducts(product) {
+  // let check = boxcards.find((pro) => pro.id === product.id);
   let productCard = document.createElement("div");
   productCard.className = "product-card";
 
@@ -29,8 +30,9 @@ function getProducts(product) {
   productPrice.innerHTML = ` Price: ${product.price} $`;
 
   let productBtn = document.createElement("button");
-  productBtn.innerHTML = `<b> В корзину</b>`;
-
+  
+  productBtn.innerHTML = `<b> В корзину ${product.id}</b>`;
+ 
   productCardFooter.prepend(productBtn);
   productCardFooter.prepend(productPrice);
   productCardFooter.prepend(productDesc);
@@ -42,6 +44,7 @@ function getProducts(product) {
 }
 
 let discountProducts = products.filter((pro) => pro.discount).slice(-4);
+
 discountProducts.map((discount) => {
   let card = getProducts(discount);
   discountRow.appendChild(card);
@@ -57,7 +60,9 @@ newProducts.map((newPro) => {
 let popularProducts = products
   .toSorted((a, b) => a.rating - b.rating)
   .slice(-4);
+o;
 popularProducts.map((popular) => {
   let card = getProducts(popular);
   popularProductsRow.appendChild(card);
 });
+console.log(discountProducts);

@@ -1,0 +1,30 @@
+.card-about {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 30px;
+  background-color: green;
+  border-radius: 20px;
+}
+.card-about h3 {
+  color: white;
+}
+.card-about p {
+  color: white;
+  padding: 7px;
+}
+.card-about .price-text {
+  padding-bottom: 10px;
+  font-weight: 600px;
+}
+.card-about button {
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+  outline: none;
+}
+.card-about span {
+  padding: 0 20px;
+  color: white;
+}

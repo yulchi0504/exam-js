@@ -12,7 +12,7 @@ function getAllProductsCard({ id, name, description: desc, price, images }) {
       <h2>${name}</h2>
       <p class="card--footer__desc">${desc}</p>
       <p class="card--footer__price">${price}$</p>
-      <button onClick="addCard(${id})" class="card--footer__btn">В корзину</button>
+      <button   class="card--footer__btn">В корзину</button>
     </div>
   </div>
   `;
@@ -29,29 +29,28 @@ function getProducts(data = products) {
 getProducts();
 
 searchInput.addEventListener("keyup", function () {
-  let search = this.value.toLowerCase(); // Katta-kichik harflarni hisobga olmaslik uchun
+  let search = this.value.toLowerCase();
   let filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(search)
   );
   getProducts(filteredProducts);
 });
 
-// function addCard(id) {
-//   let product = products.find((pro) => pro.id === id);
-//   let check = cards.find((pro) => pro.id === id);
+function addCard(id) {
+  let product = products.find((pro) => pro.id === id);
+  let check = boxcards.find((pro) => pro.id == id);
 
-//   if (check) {
-//     cards = cards.map((pro) => {
-//       if (pro.id === id) {
-//         pro.quantety++;
-//       }
-//       return pro;
-//     });
-//   } else {
-//     product.quantety = 1;
-//     cards.push(product);
-//   }
-
-//   setCard(product);
-//   console.log(cards);
-// }
+  if (check) {
+    boxcards = boxcards.map((pro) => {
+      if (pro.id === id) {
+        pro.quantety++;
+      }
+      return pro;
+    });
+  } else {
+    product.quantety = 1;
+    boxcards.push(product);
+  }
+  localStorage.setItem("boxcards", JSON.stringify(boxcards));
+  setCard(product);
+}

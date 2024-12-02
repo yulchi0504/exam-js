@@ -9,6 +9,11 @@ header {
   background-color: white;
 }
 
+.header-menu {
+  width: 100%;
+  position: fixed;
+}
+
 section {
   z-index: -10;
   margin: 0 0 20px 0;
@@ -61,8 +66,17 @@ main .container .cards {
 }
 @media (max-width: 1240px) {
   main .container .cards {
-    display: grid;
-    grid-template-columns: repeat(12, 3fr);
+    grid-template-columns: repeat(3, 12fr);
+  }
+}
+@media (max-width: 895px) {
+  main .container .cards {
+    grid-template-columns: repeat(2, 18fr);
+  }
+}
+@media (max-width: 605px) {
+  main .container .cards {
+    grid-template-columns: repeat(1, 36fr);
   }
 }
 main .container .cards .card {
@@ -72,11 +86,41 @@ main .container .cards .card {
   border-radius: 4px;
   margin-top: 20px;
 }
-main .container .cards .card img {
+@media (max-width: 605px) {
+  main .container .cards .card {
+    width: 100%;
+    height: 490px;
+  }
+}
+@media (max-width: 520px) {
+  main .container .cards .card {
+    width: 100%;
+    height: 445px;
+  }
+}
+@media (max-width: 460px) {
+  main .container .cards .card {
+    width: 100%;
+    height: 410px;
+  }
+}
+@media (max-width: 400px) {
+  main .container .cards .card {
+    width: 100%;
+    height: 390px;
+  }
+}
+@media (max-width: 370px) {
+  main .container .cards .card {
+    width: 100%;
+    height: 360px;
+  }
+}
+main .container .cards img {
   width: 100%;
   border-radius: 4px 4px 0 0;
 }
-main .container .cards .card .card--footer__btn {
+main .container .cards .card--footer__btn {
   font-family: "Rubik";
   font-size: 16px;
   font-weight: 400;
@@ -91,14 +135,14 @@ main .container .cards .card .card--footer__btn {
   transition: 1s;
   margin: 10px 0 0 10px;
 }
-main .container .cards .card h2 {
+main .container .cards h2 {
   display: -webkit-box;
   padding: 2px 10px;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
 }
-main .container .cards .card .card--footer__btn:hover {
+main .container .cards .card--footer__btn:hover {
   background: rgb(255, 102, 51);
   color: white;
   cursor: pointer;
@@ -157,4 +201,8 @@ li {
   padding: 20px 20px;
   background-color: green;
   border-radius: 12px;
+}
+
+.chek-red {
+  background-color: rebeccapurple;
 }

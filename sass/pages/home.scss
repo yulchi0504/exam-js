@@ -8,6 +8,10 @@ header {
   background-color: white;
   z-index: 1;
 }
+.header-menu {
+  width: 100%;
+  position: fixed;
+}
 
 .product-card {
   background-color: white;
@@ -37,7 +41,8 @@ header {
   @media (max-width: 460px) {
     width: 100%;
     height: 430px;
-  } @media (max-width: 410px) {
+  }
+  @media (max-width: 410px) {
     width: 100%;
     height: 400px;
   }
@@ -529,7 +534,9 @@ main {
     .cards {
       display: grid;
       grid-template-columns: repeat(4, 9fr);
-
+      @media (max-width: 1240px) {
+        grid-template-columns: repeat(3, 12fr);
+      }
       .card {
         width: 279px;
         height: 349px;

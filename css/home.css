@@ -5,6 +5,11 @@ header {
   z-index: 1;
 }
 
+.header-menu {
+  width: 100%;
+  position: fixed;
+}
+
 .product-card {
   background-color: white;
   width: 280px;
@@ -720,6 +725,11 @@ li {
 main .container .cards {
   display: grid;
   grid-template-columns: repeat(4, 9fr);
+}
+@media (max-width: 1240px) {
+  main .container .cards {
+    grid-template-columns: repeat(3, 12fr);
+  }
 }
 main .container .cards .card {
   width: 279px;

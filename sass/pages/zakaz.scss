@@ -1,0 +1,33 @@
+@use "../utils/mixin" as mxn;
+@use "../utils/variables" as var;
+
+.card-about {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 30px;
+  background-color: green;
+  border-radius: 20px;
+  h3 {
+    color: white;
+  }
+  p {
+    color: white;
+    padding: 7px;
+  }
+  .price-text {
+    padding-bottom: 10px;
+    font-weight: 600px;
+  }
+  button {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    outline: none;
+  }
+  span {
+    padding: 0 20px;
+    color: white;
+  }
+}
