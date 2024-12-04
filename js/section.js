@@ -30,9 +30,9 @@ function getProducts(product) {
   productPrice.innerHTML = ` Price: ${product.price} $`;
 
   let productBtn = document.createElement("button");
-  
+
   productBtn.innerHTML = `<b> В корзину ${product.id}</b>`;
- 
+
   productCardFooter.prepend(productBtn);
   productCardFooter.prepend(productPrice);
   productCardFooter.prepend(productDesc);
@@ -60,9 +60,8 @@ newProducts.map((newPro) => {
 let popularProducts = products
   .toSorted((a, b) => a.rating - b.rating)
   .slice(-4);
-o;
+
 popularProducts.map((popular) => {
   let card = getProducts(popular);
   popularProductsRow.appendChild(card);
 });
-console.log(discountProducts);

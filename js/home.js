@@ -12,9 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h2>${name}</h2>
           <p class="card--footer__desc">${desc}</p>
           <p class="card--footer__price">${price}$</p>
-          <button class="card--footer__btn ${
-            check ? "chek-red" : ""
-          } ocnclick="addCard(${id})">В корзину</button>
+          <button class="card--footer__btn ">В корзину</button>
         </div>
       </div>
     `;
