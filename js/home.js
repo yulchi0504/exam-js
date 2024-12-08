@@ -9,20 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
           <img src="${images[0]}" alt="${name}" />
         </div>
         <div class="card--footer">
-          <h2>${name}</h2>
+         <h2><a href="../pages/cart.html?cart=${id}"> ${name}</a></h2>
           <p class="card--footer__desc">${desc}</p>
           <p class="card--footer__price">${price}$</p>
           <button class="card--footer__btn ">В корзину</button>
         </div>
       </div>
     `;
+    getAllProductsCard();
+   
   }
-
-  const lastFourProducts = products.slice(-4);
-
-  lastFourProducts.forEach((product) => {
-    allProducts.innerHTML += getAllProductsCard(product);
-  });
 });
 let cardJson = localStorage.getItem("boxcards");
 let boxcards = JSON.parse(cardJson) || [];

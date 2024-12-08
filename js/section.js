@@ -19,7 +19,9 @@ function getProducts(product) {
   productCardFooter.className = "product-card__footer";
 
   let productTitle = document.createElement("h3");
-  productTitle.innerHTML = ` ${product.name} `;
+  productTitle.className = "text-name-pro";
+  productTitle.innerHTML = ` <a href="./pages/cart.html?cart=${product.name}">${product.name}</a> `;
+
 
   let productDesc = document.createElement("p");
   productDesc.className = "text-product-name";

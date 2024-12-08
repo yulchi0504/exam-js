@@ -70,13 +70,16 @@ header {
   color: black;
   padding: 7px 0 0 8px;
 }
+.product-card .product-card__footer .text-name-pro {
+  padding-left: 15px;
+}
 .product-card .product-card__footer .text-product-name {
   font-family: "Rubik";
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: black;
-  padding: 0 0 0 10px;
+  padding: 0 10px 0 15px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -88,7 +91,7 @@ header {
   font-weight: 600;
   line-height: 24px;
   color: black;
-  padding: 0 0 0 10px;
+  padding: 0 0 0 15px;
 }
 .product-card .product-card__footer button {
   background-color: white;
@@ -100,7 +103,7 @@ header {
   border: green 1px solid;
   padding: 10px 70px;
   border-radius: 5px;
-  margin-left: 28px;
+  margin-left: 20px;
   margin-top: 10px;
   transition: 1s;
   cursor: pointer;

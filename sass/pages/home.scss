@@ -55,9 +55,12 @@ header {
       @include mxn.family("Rubik", 18px, 700, 27px, black);
       padding: 7px 0 0 8px;
     }
+    .text-name-pro {
+      padding-left: 15px;
+    }
     .text-product-name {
       @include mxn.family("Rubik", 16px, 400, 24px, black);
-      padding: 0 0 0 10px;
+      padding: 0 10px 0 15px;
       display: -webkit-box;
 
       -webkit-box-orient: vertical;
@@ -66,7 +69,7 @@ header {
     }
     .price-product {
       @include mxn.family("Rubik", 16px, 600, 24px, black);
-      padding: 0 0 0 10px;
+      padding: 0 0 0 15px;
     }
     button {
       background-color: white;
@@ -75,7 +78,7 @@ header {
       border: green 1px solid;
       padding: 10px 70px;
       border-radius: 5px;
-      margin-left: 28px;
+      margin-left: 20px;
       margin-top: 10px;
       transition: 1s;
       cursor: pointer;
